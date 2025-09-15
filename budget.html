@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Budget Tracker</title>
+</head>
+<body>
+    <h2>Open Console to See Output</h2>
+    <script> console.log("Open console to see the output")
+        let balance = 0;
+        const currency = "$";
+        var note="using var demo";
+        let transactions = []
+        let t1 = { type: "income", amount: 1000, category: "Salary" };
+        let t2 = { type: "expense", amount: 200, category: "Food"};
+        let t3 = { type: "expnese", amount: 300, category: "Transport"};
+        transactions.push(t1, t2, t3);
+        transactions.forEach(function(tx)
+        {
+            if (tx.type === "income") {
+                balance += tx.amount;
+            } else {
+                balance -= tx.amount;
+            }
+        });
+        console.log("All Transactions:", transactions);
+        console.log("Total Balance:", currency + balance);
+        console.log(typeof currency);
+        console.log(typeof balance);
+        console.log(typeof true);
+        console.log(typeof {id:1, amt: 50});
+        console.log(typeof [1,2,3]);
+        console.log(typeof undefined);
+        console.log(typeof null);
+    </script>
+</body>
+</html>
